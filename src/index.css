@@ -1,0 +1,73 @@
+@import 'tailwindcss';
+
+@theme {
+  --font-display: 'Gambarino', ui-sans-serif, system-ui, sans-serif;
+  --font-sans: 'Switzer', ui-sans-serif, system-ui, sans-serif;
+
+  /* Warm neutrals (peachy cream) */
+  --color-champagne-50: #fff8f5;
+  --color-champagne-100: #ffedd5;
+  --color-champagne-200: #fed7aa;
+  --color-ink: #1c1410;
+  --color-ink-muted: #5c4f47;
+
+  /* Accent spectrum: yellow → orange → red → pink */
+  --color-sun: #facc15;
+  --color-sun-deep: #eab308;
+  --color-mango: #fb923c;
+  --color-tangerine: #f97316;
+  --color-cherry: #ef4444;
+  --color-ruby: #dc2626;
+  --color-rose: #f472b6;
+  --color-blush: #ec4899;
+  --color-petal: #fbcfe8;
+
+  /* Deep wine (footer / contrast blocks) */
+  --color-wine: #3a0f18;
+  --color-wine-deep: #260a10;
+
+  --shadow-soft: 0 32px 100px -24px rgb(180 50 30 / 0.12);
+  --shadow-card: 0 2px 40px -8px rgb(200 80 50 / 0.1);
+  --shadow-luxe: 0 1px 0 rgb(255 255 255 / 0.65) inset,
+    0 24px 48px -16px rgb(220 100 80 / 0.14);
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply m-0 min-h-svh bg-champagne-50 font-sans text-[17px] font-light leading-relaxed text-ink antialiased;
+    font-feature-settings: 'kern' 1, 'liga' 1;
+  }
+}
+
+@keyframes feedback-marquee {
+  from {
+    transform: translateX(0);
+  }
+  to {
+    transform: translateX(-50%);
+  }
+}
+
+@layer utilities {
+  .animate-feedback-marquee {
+    animation: feedback-marquee 50s linear infinite;
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    .animate-feedback-marquee {
+      animation: none;
+    }
+  }
+
+  /** Hide scrollbars for horizontal snap carousels (still scrollable / accessible). */
+  .scrollbar-hide {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+  }
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none;
+  }
+}
