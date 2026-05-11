@@ -1,14 +1,25 @@
 import { motion } from 'framer-motion'
 import { fadeUp } from '../motion'
+import { BentoWatermark } from './BentoWatermark'
 import { FaqItem } from './FaqItem'
 
 export function HomeFaqSection() {
   return (
-    <section id="faq" className="scroll-mt-24 border-t border-champagne-200/70 bg-champagne-50/50 py-24">
-      <div className="mx-auto max-w-3xl px-6">
+    <section
+      id="faq"
+      className="relative scroll-mt-24 overflow-hidden border-t border-champagne-200/70 bg-champagne-50/50 py-18 md:py-22 lg:py-24"
+    >
+      <BentoWatermark
+        ids={[1, 3, 4, 0]}
+        className="-right-16 top-12 rotate-[11deg] opacity-[0.08]"
+      />
+      <div className="mx-auto max-w-3xl px-4 sm:px-6">
         <motion.div className="text-center" {...fadeUp}>
-          <h2 className="font-display text-3xl font-semibold tracking-[-0.02em] text-ink md:text-[2.35rem]">
-            FAQ
+          <h2 className="font-display text-3xl font-bold leading-[1.25] tracking-[-0.02em] md:text-[2.35rem]">
+            <span className="text-ink">Questions, </span>
+            <span className="inline-block bg-gradient-to-r from-cherry via-tangerine to-rose bg-clip-text pb-[0.2em] italic text-transparent">
+              answered plainly.
+            </span>
           </h2>
           <p className="mt-2 font-sans text-sm text-ink-muted">Tap to open.</p>
         </motion.div>

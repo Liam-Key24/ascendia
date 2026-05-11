@@ -3,6 +3,7 @@ import { motion, useReducedMotion } from 'framer-motion'
 import { useState } from 'react'
 import type { FormEvent } from 'react'
 import { Link } from 'react-router-dom'
+import { BentoWatermark } from './BentoWatermark'
 import { GhostButton, PrimaryButton } from './Button'
 import { formRow2Cls, inputContactCls, labelCls, textareaContactCls } from './lead-forms/fieldStyles'
 import { springSoft } from '../motion'
@@ -23,11 +24,15 @@ export function ContactSection() {
   return (
     <section
       id="enquiries"
-      className="scroll-mt-24 border-t border-champagne-200/70 bg-white py-20 md:py-28"
+      className="relative scroll-mt-24 overflow-hidden border-t border-champagne-200/70 bg-white py-18 md:py-24 lg:py-28"
       aria-labelledby="enquiries-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
-        <div className="grid gap-12 md:grid-cols-2 md:items-start md:gap-14 lg:gap-20">
+      <BentoWatermark
+        ids={[2, 0, 3, 1]}
+        className="-left-14 top-24 rotate-[-10deg] opacity-[0.08]"
+      />
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
+        <div className="grid gap-10 md:grid-cols-2 md:items-start md:gap-12 lg:gap-20">
           <motion.div
             initial={reduceMotion ? undefined : { opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

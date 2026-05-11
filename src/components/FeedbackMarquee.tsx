@@ -1,46 +1,8 @@
 import { ChatCircle, Quotes } from '@phosphor-icons/react'
-
-const FEEDBACK = [
-  {
-    quote:
-      'Finally — someone answers emails and actually fixes things. Game changer for us.',
-    who: 'Jordan',
-    role: 'Studio owner',
-  },
-  {
-    quote:
-      'We went from “we’ll update the site someday” to it just… being handled.',
-    who: 'Priya',
-    role: 'Salon owner',
-  },
-  {
-    quote:
-      'I stopped pretending I’d learn WordPress on the weekend. Worth every penny.',
-    who: 'Marcus',
-    role: 'Contractor',
-  },
-  {
-    quote:
-      'Reservations land in one place now — not scattered across DMs and voicemail.',
-    who: 'Elena',
-    role: 'Restaurant GM',
-  },
-  {
-    quote:
-      'Guests can actually book online. Our front desk isn’t playing phone tag all day.',
-    who: 'Chris',
-    role: 'Spa director',
-  },
-  {
-    quote:
-      'One subscription covers hosting and fixes — I’m not chasing invoices for SSL at 11 p.m.',
-    who: 'Sam',
-    role: 'Cafe owner',
-  },
-]
+import { REVIEWS } from '../data/reviews'
 
 export function FeedbackMarquee() {
-  const loop = [...FEEDBACK, ...FEEDBACK]
+  const loop = [...REVIEWS, ...REVIEWS]
 
   return (
     <section
@@ -50,11 +12,11 @@ export function FeedbackMarquee() {
     >
       <div className="relative overflow-hidden">
         <div
-          className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-gradient-to-r from-champagne-50 to-transparent"
+          className="pointer-events-none absolute inset-y-0 left-0 z-10 w-16 bg-linear-to-r from-champagne-50 to-transparent"
           aria-hidden
         />
         <div
-          className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-gradient-to-l from-champagne-50 to-transparent"
+          className="pointer-events-none absolute inset-y-0 right-0 z-10 w-16 bg-linear-to-l from-champagne-50 to-transparent"
           aria-hidden
         />
         <div className="flex w-max animate-feedback-marquee gap-6 pr-6 hover:[animation-play-state:paused]">

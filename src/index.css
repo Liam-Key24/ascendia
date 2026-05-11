@@ -35,10 +35,12 @@
 @layer base {
   html {
     scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
   }
   body {
     @apply m-0 min-h-svh bg-champagne-50 font-sans text-[17px] font-light leading-relaxed text-ink antialiased;
     font-feature-settings: 'kern' 1, 'liga' 1;
+    text-rendering: optimizeLegibility;
   }
 }
 
@@ -69,5 +71,37 @@
   }
   .scrollbar-hide::-webkit-scrollbar {
     display: none;
+  }
+
+  .home-snap-container {
+    scroll-padding-top: 5.5rem;
+  }
+
+  @media (max-width: 1023px) {
+    .home-snap-page {
+      scroll-snap-type: y proximity;
+      scroll-padding-top: 5rem;
+    }
+
+    .home-snap-section {
+      scroll-snap-align: start;
+      scroll-snap-stop: normal;
+    }
+  }
+
+  @media (max-width: 767px) {
+    .home-snap-container {
+      scroll-padding-top: 4.75rem;
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html {
+      scroll-behavior: auto;
+    }
+
+    .home-snap-page {
+      scroll-snap-type: none;
+    }
   }
 }

@@ -1,19 +1,20 @@
 import { motion, useReducedMotion } from 'framer-motion'
-import { ProblemComparisonSection } from '../components/ProblemComparisonSection'
+import { ContactSection } from '../components/ContactSection'
+import { HomeFaqSection } from '../components/HomeFaqSection'
 import { springSoft } from '../motion'
 
-export function ComparePage() {
+export function EnquiriesPage() {
   const reduceMotion = useReducedMotion()
 
   return (
     <>
-      <section className="relative overflow-hidden border-b border-champagne-200/70 bg-gradient-to-b from-wine-deep/95 via-wine to-[#4a1520] py-14 text-white md:py-20 lg:py-24">
+      <section className="relative overflow-hidden border-b border-champagne-200/70 bg-linear-to-b from-wine-deep/95 via-wine to-[#4a1520] py-14 text-white md:py-20 lg:py-24">
         <div
           className="pointer-events-none absolute inset-0 bg-[radial-gradient(ellipse_80%_55%_at_50%_-15%,rgb(251_146_60/0.32),transparent)]"
           aria-hidden
         />
         <div
-          className="pointer-events-none absolute -left-40 bottom-0 size-[28rem] rounded-full bg-[radial-gradient(circle,rgb(244_63_94/0.16),transparent_62%)] blur-3xl"
+          className="pointer-events-none absolute -left-40 bottom-0 size-112 rounded-full bg-[radial-gradient(circle,rgb(244_63_94/0.16),transparent_62%)] blur-3xl"
           aria-hidden
         />
         <div
@@ -21,7 +22,7 @@ export function ComparePage() {
           aria-hidden
         />
         <div
-          className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgb(255_255_255/0.055)_1px,transparent_1px),linear-gradient(to_bottom,rgb(255_255_255/0.055)_1px,transparent_1px)] bg-[length:44px_44px] [mask-image:radial-gradient(ellipse_88%_72%_at_50%_28%,black,transparent)] opacity-90"
+          className="pointer-events-none absolute inset-0 bg-[linear-gradient(to_right,rgb(255_255_255/0.055)_1px,transparent_1px),linear-gradient(to_bottom,rgb(255_255_255/0.055)_1px,transparent_1px)] bg-size-[44px_44px] mask-[radial-gradient(ellipse_88%_72%_at_50%_28%,black,transparent)] opacity-90"
           aria-hidden
         />
         <div
@@ -29,7 +30,7 @@ export function ComparePage() {
           aria-hidden
         />
         <div
-          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-gradient-to-r from-transparent via-white/25 to-transparent"
+          className="pointer-events-none absolute inset-x-0 top-0 h-px bg-linear-to-r from-transparent via-white/25 to-transparent"
           aria-hidden
         />
 
@@ -37,7 +38,7 @@ export function ComparePage() {
           className="pointer-events-none absolute left-1/2 top-[42%] -translate-x-1/2 -translate-y-1/2 select-none font-display text-[clamp(10rem,42vw,22rem)] font-bold leading-none tracking-[-0.06em] text-white/[0.035]"
           aria-hidden
         >
-          03
+          04
         </div>
 
         <div className="relative z-10 mx-auto max-w-4xl px-6 sm:px-8">
@@ -45,7 +46,7 @@ export function ComparePage() {
             initial={reduceMotion ? false : { opacity: 0, y: 22 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ ...springSoft, delay: 0.02 }}
-            className="relative overflow-visible border border-white/12 bg-gradient-to-b from-white/[0.07] to-white/[0.02] px-6 py-12 shadow-[0_0_0_1px_rgb(255_255_255/0.04)_inset] sm:px-10 sm:py-14 md:px-12 md:py-16"
+            className="relative overflow-visible border border-white/12 bg-linear-to-b from-white/[0.07] to-white/2 px-6 py-12 shadow-[0_0_0_1px_rgb(255_255_255/0.04)_inset] sm:px-10 sm:py-14 md:px-12 md:py-16"
           >
             <div
               className="pointer-events-none absolute left-3 top-3 size-4 border-l-2 border-t-2 border-sun/50 sm:left-4 sm:top-4"
@@ -71,7 +72,7 @@ export function ComparePage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ ...springSoft, delay: 0.06 }}
               >
-                Site + bookings,
+                Ask anything,
               </motion.span>
               <motion.span
                 className="mt-1 block bg-gradient-to-r from-cherry via-tangerine to-rose bg-clip-text px-[0.2em] pb-[0.2em] italic text-transparent md:mt-1.5"
@@ -79,12 +80,12 @@ export function ComparePage() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ ...springSoft, delay: 0.12 }}
               >
-                without the patchwork
+                then we guide you clearly
               </motion.span>
             </h1>
 
             <motion.div
-              className="mx-auto mt-5 h-px max-w-xs origin-center bg-gradient-to-r from-transparent via-white/35 to-transparent md:mt-6"
+              className="mx-auto mt-5 h-px max-w-xs origin-center bg-linear-to-r from-transparent via-white/35 to-transparent md:mt-6"
               initial={reduceMotion ? false : { scaleX: 0, opacity: 0 }}
               animate={{ scaleX: 1, opacity: 1 }}
               transition={{ ...springSoft, delay: 0.2 }}
@@ -97,17 +98,19 @@ export function ComparePage() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ ...springSoft, delay: 0.18 }}
             >
-              What you get, who owns the work, and where gaps tend to show up — pick a stack that fits your team instead of duct-taping six tools together.
+              Send a quick message about your goals, timings, or package fit. You can also check the FAQs below before
+              you enquire.
             </motion.p>
 
             <p className="mt-6 text-center font-mono text-[10px] uppercase tracking-[0.22em] text-white/40 sm:text-[11px] sm:tracking-[0.26em]">
-              Same criteria · every row below
+              Direct contact · then FAQ below
             </p>
           </motion.div>
         </div>
       </section>
 
-      <ProblemComparisonSection embedded />
+      <ContactSection />
+      <HomeFaqSection />
     </>
   )
 }

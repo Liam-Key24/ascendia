@@ -1,7 +1,7 @@
 /**
  * Hex values aligned with `src/index.css` @theme — use for SVG stops and fills.
  */
-export const ASCENDIA = {
+export const BOOKUNO = {
   champagne50: '#fff8f5',
   champagne100: '#ffedd5',
   champagne200: '#fed7aa',

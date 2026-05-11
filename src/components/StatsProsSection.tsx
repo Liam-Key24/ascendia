@@ -1,5 +1,6 @@
 import { ClockCountdown, Funnel, TrendDown } from '@phosphor-icons/react'
 import { motion } from 'framer-motion'
+import { BentoWatermark } from './BentoWatermark'
 
 const easeOut = [0.22, 1, 0.36, 1] as const
 
@@ -31,10 +32,18 @@ export function StatsProsSection() {
   return (
     <section
       id="reality-check"
-      className="scroll-mt-24 py-24 md:py-28"
+      className="relative scroll-mt-24 overflow-hidden py-20 md:py-24 lg:py-28"
       aria-labelledby="reality-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <BentoWatermark
+        ids={[0, 2, 3, 4]}
+        className="-left-12 top-16 rotate-[-12deg] opacity-[0.08]"
+      />
+      <BentoWatermark
+        ids={[1, 4, 2, 0]}
+        className="-right-14 bottom-12 rotate-[12deg] opacity-[0.07]"
+      />
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div
           className="mx-auto max-w-xl text-center"
           initial={{ opacity: 0, y: 24 }}
@@ -54,7 +63,7 @@ export function StatsProsSection() {
           </p>
         </motion.div>
 
-        <div className="mt-16 grid justify-items-stretch gap-8 sm:grid-cols-2 sm:gap-9 lg:grid-cols-3 lg:gap-10">
+        <div className="mt-12 grid justify-items-stretch gap-6 sm:mt-14 sm:grid-cols-2 sm:gap-8 lg:mt-16 lg:grid-cols-3 lg:gap-10">
           {STATS.map((s, i) => (
             <motion.article
               key={s.stat}

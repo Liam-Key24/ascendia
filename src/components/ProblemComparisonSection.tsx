@@ -13,7 +13,7 @@ import type { Icon } from '@phosphor-icons/react'
 
 const easeOut = [0.22, 1, 0.36, 1] as const
 
-const ASCENDIA_PRICING_ROW =
+const BOOKUNO_PRICING_ROW =
   'No bolt ons, no extra fees, get whats on the tin. '
 
 const ROW_ICONS: Icon[] = [
@@ -34,37 +34,37 @@ const COMPARISONS = [
     rows: [
       {
         label: 'Fit',
-        ascendia: 'You run the business — we run the stack.',
+        bookuno: 'You run the business — we run the stack.',
         other: 'You’re the accidental admin for updates & plugins.',
       },
       {
         label: 'Ship',
-        ascendia: 'We build and you get training + handover.',
+        bookuno: 'We build and you get training + handover.',
         other: 'You wire hosting + theme + plugin soup.',
       },
       {
         label: 'Bookings',
-        ascendia: 'Launch = capture · Suite = full booking hub in one place.',
+        bookuno: 'Launch = capture · Suite = full booking hub in one place.',
         other: 'More plugins, more logins, more bills.',
       },
       {
         label: 'Forms',
-        ascendia: 'Flows matched to how you work.',
+        bookuno: 'Flows matched to how you work.',
         other: 'Form plugins & duct-tape embeds.',
       },
       {
         label: 'Help',
-        ascendia: 'People who built it — plain English.',
+        bookuno: 'People who built it — plain English.',
         other: 'Forums, hosts, random freelancers.',
       },
       {
         label: 'Own',
-        ascendia: 'You own it — move host or dev anytime.',
+        bookuno: 'You own it — move host or dev anytime.',
         other: 'Own it if exports still work.',
       },
       {
         label: 'Price',
-        ascendia: ASCENDIA_PRICING_ROW,
+        bookuno: BOOKUNO_PRICING_ROW,
         other: '“Free” core — hosting + plugins + fixes add up.',
       },
     ],
@@ -76,37 +76,37 @@ const COMPARISONS = [
     rows: [
       {
         label: 'Fit',
-        ascendia: 'Custom depth — not “almost fits” templates.',
+        bookuno: 'Custom depth — not “almost fits” templates.',
         other: 'Great inside the guardrails.',
       },
       {
         label: 'Ship',
-        ascendia: 'Built + trained for your workflow.',
+        bookuno: 'Built + trained for your workflow.',
         other: 'You drag blocks, and edge cases need workarounds.',
       },
       {
         label: 'Bookings',
-        ascendia: 'Suite = real guest records & notes.',
+        bookuno: 'Suite = real guest records & notes.',
         other: 'Email capture → usually another tool.',
       },
       {
         label: 'Forms',
-        ascendia: 'Enquiry & booking paths tied to one hub.',
+        bookuno: 'Enquiry & booking paths tied to one hub.',
         other: 'Widgets until you outgrow them.',
       },
       {
         label: 'Help',
-        ascendia: 'We shipped it — fast context.',
+        bookuno: 'We shipped it — fast context.',
         other: 'Platform help ≠ your weird workflow.',
       },
       {
         label: 'Own',
-        ascendia: 'Own the build with host-agnostic handover.',
+        bookuno: 'Own the build with host-agnostic handover.',
         other: 'You rent the platform — leaving = rebuild.',
       },
       {
         label: 'Price',
-        ascendia: ASCENDIA_PRICING_ROW,
+        bookuno: BOOKUNO_PRICING_ROW,
         other: '~£10–£35+/mo + add-ons + your hours.',
       },
     ],
@@ -118,37 +118,37 @@ const COMPARISONS = [
     rows: [
       {
         label: 'Fit',
-        ascendia: 'One price, one handoff, you hold the keys.',
+        bookuno: 'One price, one handoff, you hold the keys.',
         other: 'Fun until the stack gets heavy.',
       },
       {
         label: 'Ship',
-        ascendia: 'We scope & train — no app zoo.',
+        bookuno: 'We scope & train — no app zoo.',
         other: 'Layers of apps & “why so slow?”',
       },
       {
         label: 'Bookings',
-        ascendia: 'Launch or Suite — fewer logins.',
+        bookuno: 'Launch or Suite — fewer logins.',
         other: 'Light tools or paid add-ons elsewhere.',
       },
       {
         label: 'Forms',
-        ascendia: 'Enquiry + booking in one system.',
+        bookuno: 'Enquiry + booking in one system.',
         other: 'More apps for anything serious.',
       },
       {
         label: 'Help',
-        ascendia: 'Builders, not ticket roulette.',
+        bookuno: 'Builders, not ticket roulette.',
         other: 'Generic chat — complex = hire out.',
       },
       {
         label: 'Own',
-        ascendia: 'Your data, your host, your call.',
+        bookuno: 'Your data, your host, your call.',
         other: 'Migrating clean is painful.',
       },
       {
         label: 'Price',
-        ascendia: ASCENDIA_PRICING_ROW,
+        bookuno: BOOKUNO_PRICING_ROW,
         other: '~£10–£30/mo + apps — death by a thousand cuts.',
       },
     ],
@@ -240,13 +240,14 @@ export function ProblemComparisonSection({
           </div>
 
           <div className="mt-8 overflow-hidden rounded-3xl border border-champagne-200/90 bg-white/95 shadow-card ring-1 ring-champagne-100/80">
-            <div className="grid grid-cols-2 border-b border-champagne-200/80">
-              <div className="border-r border-champagne-200/70 bg-gradient-to-br from-wine/6 to-champagne-50/50 px-4 py-4 text-center sm:px-6">
+            <div className="grid grid-cols-2 gap-x-0 border-b border-champagne-200/80 bg-champagne-50/95 sm:grid-cols-[5.5rem_1fr_1fr] sm:gap-x-5">
+              <div className="hidden border-r border-champagne-200/60 sm:block" aria-hidden />
+              <div className="border-r border-champagne-200/60 px-4 py-4 text-center sm:px-6">
                 <span className="font-display text-sm font-semibold tracking-tight text-wine md:text-[15px]">
-                  Ascendia
+                  Bookuno
                 </span>
               </div>
-              <div className="bg-gradient-to-br from-white to-champagne-50/30 px-4 py-4 text-center sm:px-6">
+              <div className="px-4 py-4 text-center sm:px-6">
                 <span className="font-display text-sm font-semibold tracking-tight text-ink-muted md:text-[15px]">
                   {current.otherLabel}
                 </span>
@@ -285,7 +286,7 @@ export function ProblemComparisonSection({
                         </span>
                       </div>
                       <p className="text-balance text-center font-sans text-[13px] font-semibold leading-relaxed text-ink sm:px-1 sm:text-[14px]">
-                        {row.ascendia}
+                        {row.bookuno}
                       </p>
                       <p className="text-balance text-center font-sans text-[13px] leading-relaxed text-ink-muted sm:px-1 sm:text-[14px]">
                         {row.other}

@@ -6,7 +6,7 @@ export function HomeWhatWeDoSection() {
   return (
     <section
       id="what-we-do"
-      className="relative scroll-mt-24 overflow-hidden bg-gradient-to-b from-champagne-100/95 via-white to-champagne-50/90 py-24 md:py-32"
+      className="relative scroll-mt-24 overflow-hidden bg-gradient-to-b from-champagne-100/95 via-white to-champagne-50/90 py-20 md:py-24 lg:py-32"
       aria-labelledby="what-we-do-heading"
     >
       <div className="pointer-events-none absolute inset-0 overflow-hidden" aria-hidden>
@@ -14,7 +14,7 @@ export function HomeWhatWeDoSection() {
         <div className="absolute -right-24 bottom-0 size-80 rounded-full bg-gradient-to-tl from-sun/20 to-transparent blur-3xl" />
       </div>
 
-      <div className="relative mx-auto max-w-6xl px-6">
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div className="mx-auto max-w-xl text-center" {...fadeUp}>
           <h2
             id="what-we-do-heading"

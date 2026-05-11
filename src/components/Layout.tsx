@@ -34,13 +34,13 @@ export function Layout({ children }: { children: ReactNode }) {
       </div>
 
       <header className="sticky top-0 z-50 border-b border-champagne-200/60 bg-champagne-50/85 backdrop-blur-xl">
-        <div className="mx-auto flex max-w-6xl items-center gap-4 px-6 py-4">
+        <div className="mx-auto flex max-w-6xl items-center gap-3 px-4 py-3 sm:gap-4 sm:px-6 sm:py-4">
           <motion.div whileHover={{ scale: 1.03 }} transition={springSnappy}>
             <Link
               to="/"
-              className="font-display text-xl font-semibold tracking-[-0.02em] text-ink sm:text-2xl"
+            className="font-display text-lg font-semibold tracking-[-0.02em] text-ink sm:text-2xl"
             >
-              Ascendia
+              Bookuno
             </Link>
           </motion.div>
 
@@ -57,10 +57,10 @@ export function Layout({ children }: { children: ReactNode }) {
             <NavLink to="/compare" className={link}>
               Compare
             </NavLink>
-            <a href="/#enquiries" className="text-ink-muted transition hover:text-ink">
+            <NavLink to="/enquiries" className={link}>
               Enquiries
-            </a>
-            <a href="/#faq" className="text-ink-muted transition hover:text-ink">
+            </NavLink>
+            <a href="/enquiries#faq" className="text-ink-muted transition hover:text-ink">
               FAQ
             </a>
           </nav>
@@ -69,25 +69,46 @@ export function Layout({ children }: { children: ReactNode }) {
             <GhostButton
               type="button"
               className="hidden px-4 py-2 text-xs sm:inline-flex sm:px-5 sm:py-2.5 sm:text-sm"
-              onClick={() => navigate('/#enquiries')}
+              onClick={() => navigate('/enquiries')}
             >
               Enquiries
             </GhostButton>
             <PrimaryButton
-              className="px-4 py-2 text-xs sm:px-5 sm:py-2.5 sm:text-sm"
+              className="px-3.5 py-2 text-xs sm:px-5 sm:py-2.5 sm:text-sm"
               onClick={() => navigate('/#pricing')}
             >
               Start
             </PrimaryButton>
           </div>
         </div>
+
+        <nav
+          className="mx-auto flex max-w-6xl items-center gap-4 overflow-x-auto px-4 pb-3 font-sans text-xs font-medium text-ink-muted scrollbar-hide sm:hidden"
+          aria-label="Mobile"
+        >
+          <NavLink to="/packages" className={link}>
+            Packages
+          </NavLink>
+          <NavLink to="/work" className={link}>
+            Work
+          </NavLink>
+          <NavLink to="/compare" className={link}>
+            Compare
+          </NavLink>
+          <NavLink to="/enquiries" className={link}>
+            Enquiries
+          </NavLink>
+          <a href="/enquiries#faq" className="whitespace-nowrap transition hover:text-ink">
+            FAQ
+          </a>
+        </nav>
       </header>
 
       <main>{children}</main>
 
       <footer className="border-t border-white/5 bg-wine-deep py-12 text-center font-sans text-sm text-white/55">
         <p className="font-display text-lg font-semibold tracking-[-0.02em] text-champagne-50 sm:text-xl">
-          Ascendia
+          Bookuno
         </p>
         <p className="mt-2 text-white/50">Sites &amp; bookings — we host &amp; maintain.</p>
         <p className="mt-4 flex flex-wrap items-center justify-center gap-x-3 gap-y-1 text-center text-sm">
@@ -103,12 +124,12 @@ export function Layout({ children }: { children: ReactNode }) {
             Compare
           </Link>
           <span className="text-white/25">·</span>
-          <Link to="/#enquiries" className="text-white/70 hover:text-white">
+          <Link to="/enquiries" className="text-white/70 hover:text-white">
             Enquiries
           </Link>
         </p>
         <p className="mt-6 text-xs text-white/35">
-          © {new Date().getFullYear()} Ascendia
+          © {new Date().getFullYear()} Bookuno
         </p>
       </footer>
     </div>

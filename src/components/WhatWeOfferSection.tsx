@@ -30,7 +30,7 @@ export function WhatWeOfferSection() {
   return (
     <section
       id="what-we-offer"
-      className="relative scroll-mt-24 overflow-hidden border-y border-champagne-200/70 bg-gradient-to-b from-champagne-50/90 via-white to-petal/15 py-20 md:py-28"
+      className="relative scroll-mt-24 overflow-hidden border-y border-champagne-200/70 bg-gradient-to-b from-champagne-50/90 via-white to-petal/15 py-18 md:py-24 lg:py-28"
       aria-labelledby="what-we-offer-heading"
       aria-describedby="what-we-offer-caption"
     >
@@ -47,7 +47,7 @@ export function WhatWeOfferSection() {
         aria-hidden
       />
 
-      <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-6">
+      <div className="relative mx-auto flex w-full max-w-7xl flex-col items-center px-4 sm:px-6">
         <motion.div
           className="mx-auto w-full max-w-2xl text-center"
           initial={{ opacity: 0, y: 22 }}

@@ -1,7 +1,7 @@
-import { ASCENDIA as C } from '../constants/ascendiaPalette'
+import { BOOKUNO as C } from '../constants/bookunoPalette'
 
 /**
- * Bauhaus-style modular SVG tiles — Ascendia palette, linear + radial gradients only.
+ * Bauhaus-style modular SVG tiles — Bookuno palette, linear + radial gradients only.
  */
 
 function DefsPain0({ uid }: { uid: string }) {

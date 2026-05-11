@@ -2,6 +2,7 @@ import { BrowserRouter, Route, Routes } from 'react-router-dom'
 import { Layout } from './components/Layout'
 import { ScrollToTop } from './components/ScrollToTop'
 import { ComparePage } from './pages/ComparePage'
+import { EnquiriesPage } from './pages/EnquiriesPage'
 import { HomePage } from './pages/HomePage'
 import { LeadFormPage } from './pages/LeadFormPage'
 import { PackagesPage } from './pages/PackagesPage'
@@ -17,6 +18,7 @@ export default function App() {
           <Route path="/packages" element={<PackagesPage />} />
           <Route path="/work" element={<WorkPage />} />
           <Route path="/compare" element={<ComparePage />} />
+          <Route path="/enquiries" element={<EnquiriesPage />} />
           <Route path="/contact/:kind" element={<LeadFormPage />} />
         </Routes>
       </Layout>

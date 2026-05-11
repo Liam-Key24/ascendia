@@ -48,10 +48,10 @@ export function WhoPainPoints() {
   return (
     <section
       id="who"
-      className="relative scroll-mt-24 border-y border-champagne-200/80 bg-champagne-50/40 py-20 md:py-28"
+      className="relative scroll-mt-24 border-y border-champagne-200/80 bg-champagne-50/40 py-18 md:py-24 lg:py-28"
       aria-labelledby="who-heading"
     >
-      <div className="relative mx-auto max-w-6xl px-6">
+      <div className="relative mx-auto max-w-6xl px-4 sm:px-6">
         <div className="mx-auto max-w-2xl text-center">
           <h2
             id="who-heading"
@@ -65,11 +65,11 @@ export function WhoPainPoints() {
         </div>
 
         <ul
-          className="mt-12 grid grid-cols-1 gap-4 md:mt-14 md:grid-cols-6 md:gap-5"
+          className="mt-10 grid grid-cols-1 gap-4 sm:mt-12 md:mt-14 md:grid-cols-6 md:gap-5"
           aria-label="Common situations we help with"
         >
           {ITEMS.map((item, i) => (
-            <li key={item.tag} className={`flex min-h-[26rem] flex-col sm:min-h-[28rem] ${gridSpans[i]}`}>
+            <li key={item.tag} className={`flex min-h-[22rem] flex-col sm:min-h-[26rem] md:min-h-[28rem] ${gridSpans[i]}`}>
               <motion.div
                 className="flex h-full min-h-0 w-full flex-1 flex-col overflow-hidden rounded-2xl border border-champagne-200/90 bg-white shadow-sm ring-1 ring-champagne-100/80"
                 initial={reduceMotion ? false : { opacity: 0, y: 28 }}

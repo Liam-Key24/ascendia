@@ -2,6 +2,7 @@ import { SealCheck } from '@phosphor-icons/react'
 import { motion } from 'framer-motion'
 import { Link, useNavigate } from 'react-router-dom'
 import { PrimaryButton } from './Button'
+import { BentoWatermark } from './BentoWatermark'
 import { SUBSCRIPTION_TIERS } from '../data/pricingTiers'
 import { fadeUp, springSnappy, springSoft } from '../motion'
 
@@ -11,10 +12,18 @@ export function HomePricingSection() {
   return (
     <section
       id="pricing"
-      className="scroll-mt-24 border-t border-champagne-200/70 bg-white/70 py-28"
+      className="relative scroll-mt-24 overflow-hidden border-t border-champagne-200/70 bg-white/70 py-20 md:py-24 lg:py-28"
       aria-labelledby="pricing-heading"
     >
-      <div className="mx-auto max-w-6xl px-6">
+      <BentoWatermark
+        ids={[4, 1, 3, 2]}
+        className="-left-10 top-20 rotate-[-8deg] opacity-[0.07]"
+      />
+      <BentoWatermark
+        ids={[0, 2, 4, 1]}
+        className="-right-12 bottom-20 rotate-[9deg] opacity-[0.08]"
+      />
+      <div className="mx-auto max-w-6xl px-4 sm:px-6">
         <motion.div className="mx-auto max-w-2xl text-center" {...fadeUp}>
           <h2
             id="pricing-heading"
